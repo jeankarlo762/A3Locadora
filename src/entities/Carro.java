@@ -1,67 +1,37 @@
 package entities;
 
 public class Carro {
+    private int id;
+    private String marca;
+    private String modelo;
 
-	private Integer idCarro;
-	
-	private Double kilometros;
-	
-	private String modelo;
-	
-	private String marca;
-	
-	private String cor;
-	
-	private Double preco;
+    public Carro(int id, String marca, String modelo) {
+        this.id = id;
+        this.marca = marca;
+        this.modelo = modelo;
+    }
 
-	public Double getKilometros() {
-		return kilometros;
-	}
+    public int getId() {
+        return id;
+    }
 
-	public void setKilometros(Double kilometros) {
-		this.kilometros = kilometros;
-	}
+    public void setId(int id) {
+        this.id = id;
+    }
 
-	public String getModelo() {
-		return modelo;
-	}
+    public String getMarca() {
+        return marca;
+    }
 
-	public void setModelo(String modelo) {
-		this.modelo = modelo;
-	}
+    public void setMarca(String marca) {
+        this.marca = marca;
+    }
 
-	public String getMarca() {
-		return marca;
-	}
+    public String getModelo() {
+        return modelo;
+    }
 
-	public void setMarca(String marca) {
-		this.marca = marca;
-	}
-
-	public String getCor() {
-		return cor;
-	}
-
-	public void setCor(String cor) {
-		this.cor = cor;
-	}
-
-	public Integer getIdCarro() {
-		return idCarro;
-	}
-
-	public void setIdCarro(Integer idCarro) {
-		this.idCarro = idCarro;
-	}
-
-	public Double getPreco() {
-		return preco;
-	}
-
-	public void setPreco(Double preco) {
-		this.preco = preco;
-	}
-	
-	
-	
+    public void setModelo(String modelo) {
+        this.modelo = modelo;
+    }
 }
