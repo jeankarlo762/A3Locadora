@@ -104,7 +104,7 @@ public class TelaCadastroCliente extends JFrame {
 		JButton btnNewButton_2 = new JButton("Alterar");
 		btnNewButton_2.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String sql = "UPDATE clientes SET nmCLI = ?, e_mailCli = ? WHERE cdCli = ?";
+				String sql = "UPDATE clientes SET nome = ?, email = ? WHERE codigo = ?";
 				
 				ConnectionFactory factory = new ConnectionFactory();
 				
@@ -130,7 +130,7 @@ public class TelaCadastroCliente extends JFrame {
 		JButton btnNewButton_3 = new JButton("Excluir");
 		btnNewButton_3.addActionListener(new ActionListener() {
 			public void actionPerformed(ActionEvent e) {
-				String sql = "delete from clientes WHERE cdCli = ?";
+				String sql = "delete from clientes WHERE codigo = ?";
 				
 				ConnectionFactory factory = new ConnectionFactory();
 				
@@ -173,9 +173,9 @@ public class TelaCadastroCliente extends JFrame {
 					ResultSet rs = ps.executeQuery();
 					
 					while (rs.next()) {
-						int codigo = rs.getInt("cdCli");
-						String nome = rs.getString("nmCli");
-						String email = rs.getString("e_mailCli");
+						int codigo = rs.getInt("codigo");
+						String nome = rs.getString("nome");
+						String email = rs.getString("email");
 						String aux = String.format(
 								"Código: %d \n Nome: %s \n Email: %s\n", 
 								codigo, nome, email);
